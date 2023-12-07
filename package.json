@@ -1,0 +1,45 @@
+{
+    "name": "func",
+    "private": true,
+    "version": "1.0.0",
+    "description": "A functional music composition library.",
+    "type": "module",
+    "main": "src/index.js",
+    "browser": "dist/func.js",
+    "scripts": {
+      "clean": "rimraf dist",
+      "lint": "eslint src/js --fix",
+      "build:docs": "cp -r docs dist",
+      "build:js": "rollup -c",
+      "prebuild": "npm run clean",
+      "build": "npm run build:docs && npm run build:js",
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "live-server docs --watch src --mount=/:./src"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/ok-steve/func.git"
+    },
+    "author": {
+      "name": "Steve Cherry",
+      "email": "steve@stevecherry.net",
+      "url": "https://stevecherry.net"
+    },
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/ok-steve/func/issues"
+    },
+    "homepage": "https://github.com/ok-steve/func#readme",
+    "devDependencies": {
+      "@rollup/plugin-terser": "^0.4.3",
+      "eslint": "^8.49.0",
+      "eslint-config-airbnb-base": "^15.0.0",
+      "eslint-config-prettier": "^9.0.0",
+      "eslint-plugin-compat": "^4.2.0",
+      "eslint-plugin-import": "^2.28.1",
+      "live-server": "^1.2.2",
+      "rimraf": "^5.0.1",
+      "rollup": "^3.29.2"
+    }
+  }
+  
